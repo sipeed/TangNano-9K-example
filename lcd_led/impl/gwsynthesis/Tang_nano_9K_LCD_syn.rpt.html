@@ -1,0 +1,1447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>synthesis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper{ width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td { border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table td.label { min-width: 100px; width: 8%;}
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#about" style=" font-size: 16px;">Synthesis Messages</a></li>
+<li><a href="#setting" style=" font-size: 16px;">Design Settings</a></li>
+<li><a href="#resource" style=" font-size: 16px;">Resource</a>
+<ul>
+<li><a href="#usage" style=" font-size: 14px;">Resource Usage Summary</a></li>
+<li><a href="#utilization" style=" font-size: 14px;">Resource Utilization Summary</a></li>
+</ul>
+</li>
+<li><a href="#timing" style=" font-size: 16px;">Timing</a>
+<ul>
+<li><a href="#clock" style=" font-size: 14px;">Clock Summary</a></li>
+<li><a href="#timing report" style=" font-size: 14px;">Timing Report</a></li>
+<li><a href="#performance" style=" font-size: 14px;">Performance Summary</a></li>
+<li><a href="#detail timing" style=" font-size: 14px;">Detail Timing Paths Informations</a></li>
+</ul>
+</li>
+<li><a href="#summary" style=" font-size: 16px;">Summary</a></li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="about">Synthesis Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>GowinSynthesis Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>E:\FPGA\Tang_nano_9K_LCD\src\TOP.v<br>
+E:\FPGA\Tang_nano_9K_LCD\src\VGAMod.v<br>
+E:\FPGA\Tang_nano_9K_LCD\src\gowin_osc\gowin_osc.v<br>
+E:\FPGA\Tang_nano_9K_LCD\src\gowin_rpll\gowin_rpll.v<br>
+</td>
+</tr>
+<tr>
+<td class="label">GowinSynthesis Constraints File</td>
+<td>---</td>
+</tr>
+<tr>
+<td class="label">GowinSynthesis Verision</td>
+<td>GowinSynthesis V1.9.6.02Beta</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Fri Dec 31 10:02:23 2021
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2020 Gowin Semiconductor Corporation. ALL rights reserved.</td>
+</tr>
+</table>
+<h1><a name="setting">Design Settings</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Top Level Module:</td>
+<td>TOP</td>
+</tr>
+<tr>
+<td class="label">Part Number:</td>
+<td>GW1NR-LV9QN88PC6/I5</td>
+</tr>
+</table><br/>
+<h1><a name="resource">Resource</a></h1>
+<h2><a name="usage">Resource Usage Summary</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>I/OPORT Usage:</b></td>
+<td>38</td>
+</tr>
+<tr>
+<td class="label"><b>I/OBUF Usage:</b></td>
+<td>37</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspIBUF</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspOBUF</td>
+<td>35</td>
+</tr>
+<tr>
+<td class="label"><b>REG Usage:</b></td>
+<td>64</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFPE</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFC</td>
+<td>33</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFCE</td>
+<td>19</td>
+</tr>
+<tr>
+<td class="label"><b>LUT Usage:</b></td>
+<td>207</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
+<td>21</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
+<td>40</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
+<td>146</td>
+</tr>
+<tr>
+<td class="label"><b>ALU Usage:</b></td>
+<td>186</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspALU</td>
+<td>186</td>
+</tr>
+<tr>
+<td class="label"><b>INV Usage:</b></td>
+<td>1</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="label"><b>DSP Usage:</b></td>
+<td>17</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspMULT9X9</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspMULT18X18</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="label"><b>CLOCK Usage:</b></td>
+<td>1</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsprPLL</td>
+<td>1</td>
+</tr>
+</table><br/>
+<h2><a name="utilization">Resource Utilization Summary</a></h2>
+Target Device: GW1NR-9C-QFN88P
+<table class="summary_table">
+<tr>
+<td class="label">CFU Logics</td>
+<td>394(208 LUTs, 186 ALUs) / 8640</td>
+<td>5%</td>
+</tr>
+<tr>
+<td class="label">Registers</td>
+<td>64 / 6771</td>
+<td>1%</td>
+</tr>
+<tr>
+<td class="label">BSRAMs</td>
+<td>0 / 26</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">DSP Macros</td>
+<td>9 / (5*2)</td>
+<td>90%</td>
+</tr>
+</table><br/><br/>
+<h1><a name="timing">Timing</a></h1>
+<h2><a name="clock">Clock Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<th>Clock</th>
+<th>Type</th>
+<th>Frequency</th>
+<th>Period</th>
+<th>Rise</th>
+<th>Fall</th>
+<th>Source</th>
+<th>Master</th>
+<th>Object</th>
+</tr>
+<tr>
+<td>XTAL_IN.default_clk</td>
+<td>Base</td>
+<td>27.0 MHz</td>
+<td>37.037</td>
+<td>0.000</td>
+<td>18.519</td>
+<td> </td>
+<td> </td>
+<td>XTAL_IN_ibuf/I </td>
+</tr>
+<tr>
+<td>chip_pll/rpll_inst/CLKOUT.default_gen_clk</td>
+<td>Generated</td>
+<td>129.6 MHz</td>
+<td>7.716</td>
+<td>0.000</td>
+<td>3.858</td>
+<td>XTAL_IN_ibuf/I</td>
+<td>XTAL_IN.default_clk</td>
+<td>chip_pll/rpll_inst/CLKOUT </td>
+</tr>
+<tr>
+<td>chip_pll/rpll_inst/CLKOUTP.default_gen_clk</td>
+<td>Generated</td>
+<td>129.6 MHz</td>
+<td>7.716</td>
+<td>0.000</td>
+<td>3.858</td>
+<td>XTAL_IN_ibuf/I</td>
+<td>XTAL_IN.default_clk</td>
+<td>chip_pll/rpll_inst/CLKOUTP </td>
+</tr>
+<tr>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk</td>
+<td>Generated</td>
+<td>32.4 MHz</td>
+<td>30.864</td>
+<td>0.000</td>
+<td>15.432</td>
+<td>XTAL_IN_ibuf/I</td>
+<td>XTAL_IN.default_clk</td>
+<td>chip_pll/rpll_inst/CLKOUTD </td>
+</tr>
+<tr>
+<td>chip_pll/rpll_inst/CLKOUTD3.default_gen_clk</td>
+<td>Generated</td>
+<td>43.2 MHz</td>
+<td>23.148</td>
+<td>0.000</td>
+<td>11.574</td>
+<td>XTAL_IN_ibuf/I</td>
+<td>XTAL_IN.default_clk</td>
+<td>chip_pll/rpll_inst/CLKOUTD3 </td>
+</tr>
+</table><br/>
+<h2><a name="timing report">Timing Report:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Top View:</td>
+<td>TOP</td>
+</tr>
+<tr>
+<td class="label">Requested Frequency:</td>
+<td>27.0 MHz</td>
+</tr>
+<tr>
+<td class="label">Paths Requested:</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="label">Constraint File(ignored):</td>
+<td></td>
+</tr>
+</table>
+<b>All time values displayed in nanoseconds(ns).</b><br/><br/>
+<h2><a name="performance">Performance Summary:</a></h2>
+Worst Slack in Design:&nbsp29.482<br/>
+<table class="summary_table">
+<tr>
+<th>Start Clock</th>
+<th>Slack</th>
+<th>Requested Frequency</th>
+<th>Estimated Frequency</th>
+<th>Requested Period</th>
+<th>Estimated Period</th>
+<th>Clock Type</th>
+</tr>
+<tr>
+<td>XTAL_IN.default_clk</td>
+<td>29.482</td>
+<td>27.0 MHz</td>
+<td>132.4 MHz</td>
+<td>37.037</td>
+<td>7.555</td>
+<td>Base</td>
+</tr>
+<tr>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk</td>
+<td>23.452</td>
+<td>32.4 MHz</td>
+<td>134.9 MHz</td>
+<td>30.864</td>
+<td>7.412</td>
+<td>Generated</td>
+</tr>
+</table><br/>
+<h2><a name="detail timing">Detail Timing Paths Information</a></h2>
+<b>Path information for path number&nbsp</b>1&nbsp:&nbsp<br/>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>30.864</td>
+</tr>
+<tr>
+<td class="label">    Slack(critical):</td>
+<td>23.452</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time:</td>
+<td>7.340</td>
+</tr>
+<tr>
+<td class="label">Data Required Time:</td>
+<td>30.792</td>
+</tr>
+<tr>
+<td class="label">Number of Logic Level:</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="label">Starting Point:</td>
+<td>chip_pll/rpll_inst</td>
+</tr>
+<tr>
+<td class="label">Ending Point:</td>
+<td>D1/PixelCount_0_s0</td>
+</tr>
+<tr>
+<td class="label">The Start Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+<tr>
+<td class="label">The End Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+</table><br/><br/>
+<table class="summary_table">
+<tr>
+<th>Instance/Net Name</th>
+<th>Type</th>
+<th>Pin Name</th>
+<th>Pin Dir</th>
+<th>Delay</th>
+<th>Arrival Time</th>
+<th>Fanout</th>
+</tr>
+<tr>
+<td>\chip_pll/rpll_inst </td>
+<td>rPLL</td>
+<td>CLKOUTD</td>
+<td>Out</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LCD_CLK_d</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+<td>28</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>CLK</td>
+<td>In</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>Q</td>
+<td>Out</td>
+<td>0.458</td>
+<td>0.821</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount[5]</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>4</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>1.301</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>2.400</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>I2</td>
+<td>In</td>
+<td>-</td>
+<td>2.880</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>0.822</td>
+<td>3.702</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>4.182</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>5.281</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>27</td>
+</tr>
+<tr>
+<td>\D1/n98_s1 </td>
+<td>LUT2</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>5.761</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/n98_s1 </td>
+<td>LUT2</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>6.860</td>
+<td>-</td>
+</tr>
+<tr>
+<td>n98_5</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/PixelCount_0_s0 </td>
+<td>DFFC</td>
+<td>D</td>
+<td>In</td>
+<td>-</td>
+<td>7.340</td>
+<td>-</td>
+</tr>
+</table><br/>
+<b>Total Path Delay: </b>7.340<br/>
+<b>Logic Delay: </b>4.577(62.4%)<br/>
+<b>Route Delay: </b>2.763(37.6%)<br/>
+<br/><br/>
+<b>Path information for path number&nbsp</b>2&nbsp:&nbsp<br/>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>30.864</td>
+</tr>
+<tr>
+<td class="label">    Slack(non-critical):</td>
+<td>23.519</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time:</td>
+<td>7.273</td>
+</tr>
+<tr>
+<td class="label">Data Required Time:</td>
+<td>30.792</td>
+</tr>
+<tr>
+<td class="label">Number of Logic Level:</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="label">Starting Point:</td>
+<td>chip_pll/rpll_inst</td>
+</tr>
+<tr>
+<td class="label">Ending Point:</td>
+<td>D1/PixelCount_4_s0</td>
+</tr>
+<tr>
+<td class="label">The Start Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+<tr>
+<td class="label">The End Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+</table><br/><br/>
+<table class="summary_table">
+<tr>
+<th>Instance/Net Name</th>
+<th>Type</th>
+<th>Pin Name</th>
+<th>Pin Dir</th>
+<th>Delay</th>
+<th>Arrival Time</th>
+<th>Fanout</th>
+</tr>
+<tr>
+<td>\chip_pll/rpll_inst </td>
+<td>rPLL</td>
+<td>CLKOUTD</td>
+<td>Out</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LCD_CLK_d</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+<td>28</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>CLK</td>
+<td>In</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>Q</td>
+<td>Out</td>
+<td>0.458</td>
+<td>0.821</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount[5]</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>4</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>1.301</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>2.400</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>I2</td>
+<td>In</td>
+<td>-</td>
+<td>2.880</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>0.822</td>
+<td>3.702</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>4.182</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>5.281</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>27</td>
+</tr>
+<tr>
+<td>\D1/n94_s1 </td>
+<td>LUT3</td>
+<td>I0</td>
+<td>In</td>
+<td>-</td>
+<td>5.761</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/n94_s1 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>1.032</td>
+<td>6.793</td>
+<td>-</td>
+</tr>
+<tr>
+<td>n94_5</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/PixelCount_4_s0 </td>
+<td>DFFC</td>
+<td>D</td>
+<td>In</td>
+<td>-</td>
+<td>7.273</td>
+<td>-</td>
+</tr>
+</table><br/>
+<b>Total Path Delay: </b>7.273<br/>
+<b>Logic Delay: </b>4.510(62.0%)<br/>
+<b>Route Delay: </b>2.763(38.0%)<br/>
+<br/><br/>
+<b>Path information for path number&nbsp</b>3&nbsp:&nbsp<br/>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>30.864</td>
+</tr>
+<tr>
+<td class="label">    Slack(non-critical):</td>
+<td>23.519</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time:</td>
+<td>7.273</td>
+</tr>
+<tr>
+<td class="label">Data Required Time:</td>
+<td>30.792</td>
+</tr>
+<tr>
+<td class="label">Number of Logic Level:</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="label">Starting Point:</td>
+<td>chip_pll/rpll_inst</td>
+</tr>
+<tr>
+<td class="label">Ending Point:</td>
+<td>D1/PixelCount_1_s0</td>
+</tr>
+<tr>
+<td class="label">The Start Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+<tr>
+<td class="label">The End Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+</table><br/><br/>
+<table class="summary_table">
+<tr>
+<th>Instance/Net Name</th>
+<th>Type</th>
+<th>Pin Name</th>
+<th>Pin Dir</th>
+<th>Delay</th>
+<th>Arrival Time</th>
+<th>Fanout</th>
+</tr>
+<tr>
+<td>\chip_pll/rpll_inst </td>
+<td>rPLL</td>
+<td>CLKOUTD</td>
+<td>Out</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LCD_CLK_d</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+<td>28</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>CLK</td>
+<td>In</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>Q</td>
+<td>Out</td>
+<td>0.458</td>
+<td>0.821</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount[5]</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>4</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>1.301</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>2.400</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>I2</td>
+<td>In</td>
+<td>-</td>
+<td>2.880</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>0.822</td>
+<td>3.702</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>4.182</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>5.281</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>27</td>
+</tr>
+<tr>
+<td>\D1/n97_s1 </td>
+<td>LUT3</td>
+<td>I0</td>
+<td>In</td>
+<td>-</td>
+<td>5.761</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/n97_s1 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>1.032</td>
+<td>6.793</td>
+<td>-</td>
+</tr>
+<tr>
+<td>n97_5</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/PixelCount_1_s0 </td>
+<td>DFFC</td>
+<td>D</td>
+<td>In</td>
+<td>-</td>
+<td>7.273</td>
+<td>-</td>
+</tr>
+</table><br/>
+<b>Total Path Delay: </b>7.273<br/>
+<b>Logic Delay: </b>4.510(62.0%)<br/>
+<b>Route Delay: </b>2.763(38.0%)<br/>
+<br/><br/>
+<b>Path information for path number&nbsp</b>4&nbsp:&nbsp<br/>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>30.864</td>
+</tr>
+<tr>
+<td class="label">    Slack(non-critical):</td>
+<td>23.519</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time:</td>
+<td>7.273</td>
+</tr>
+<tr>
+<td class="label">Data Required Time:</td>
+<td>30.792</td>
+</tr>
+<tr>
+<td class="label">Number of Logic Level:</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="label">Starting Point:</td>
+<td>chip_pll/rpll_inst</td>
+</tr>
+<tr>
+<td class="label">Ending Point:</td>
+<td>D1/PixelCount_3_s0</td>
+</tr>
+<tr>
+<td class="label">The Start Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+<tr>
+<td class="label">The End Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+</table><br/><br/>
+<table class="summary_table">
+<tr>
+<th>Instance/Net Name</th>
+<th>Type</th>
+<th>Pin Name</th>
+<th>Pin Dir</th>
+<th>Delay</th>
+<th>Arrival Time</th>
+<th>Fanout</th>
+</tr>
+<tr>
+<td>\chip_pll/rpll_inst </td>
+<td>rPLL</td>
+<td>CLKOUTD</td>
+<td>Out</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LCD_CLK_d</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+<td>28</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>CLK</td>
+<td>In</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>Q</td>
+<td>Out</td>
+<td>0.458</td>
+<td>0.821</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount[5]</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>4</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>1.301</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>2.400</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>I2</td>
+<td>In</td>
+<td>-</td>
+<td>2.880</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>0.822</td>
+<td>3.702</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>4.182</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>5.281</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>27</td>
+</tr>
+<tr>
+<td>\D1/n95_s1 </td>
+<td>LUT3</td>
+<td>I0</td>
+<td>In</td>
+<td>-</td>
+<td>5.761</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/n95_s1 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>1.032</td>
+<td>6.793</td>
+<td>-</td>
+</tr>
+<tr>
+<td>n95_5</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/PixelCount_3_s0 </td>
+<td>DFFC</td>
+<td>D</td>
+<td>In</td>
+<td>-</td>
+<td>7.273</td>
+<td>-</td>
+</tr>
+</table><br/>
+<b>Total Path Delay: </b>7.273<br/>
+<b>Logic Delay: </b>4.510(62.0%)<br/>
+<b>Route Delay: </b>2.763(38.0%)<br/>
+<br/><br/>
+<b>Path information for path number&nbsp</b>5&nbsp:&nbsp<br/>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>30.864</td>
+</tr>
+<tr>
+<td class="label">    Slack(non-critical):</td>
+<td>23.519</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time:</td>
+<td>7.273</td>
+</tr>
+<tr>
+<td class="label">Data Required Time:</td>
+<td>30.792</td>
+</tr>
+<tr>
+<td class="label">Number of Logic Level:</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="label">Starting Point:</td>
+<td>chip_pll/rpll_inst</td>
+</tr>
+<tr>
+<td class="label">Ending Point:</td>
+<td>D1/PixelCount_6_s0</td>
+</tr>
+<tr>
+<td class="label">The Start Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+<tr>
+<td class="label">The End Point Is Clocked By:</td>
+<td>chip_pll/rpll_inst/CLKOUTD.default_gen_clk[rising]</td>
+</tr>
+</table><br/><br/>
+<table class="summary_table">
+<tr>
+<th>Instance/Net Name</th>
+<th>Type</th>
+<th>Pin Name</th>
+<th>Pin Dir</th>
+<th>Delay</th>
+<th>Arrival Time</th>
+<th>Fanout</th>
+</tr>
+<tr>
+<td>\chip_pll/rpll_inst </td>
+<td>rPLL</td>
+<td>CLKOUTD</td>
+<td>Out</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LCD_CLK_d</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+<td>28</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>CLK</td>
+<td>In</td>
+<td>-</td>
+<td>0.363</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_5_s1 </td>
+<td>DFFCE</td>
+<td>Q</td>
+<td>Out</td>
+<td>0.458</td>
+<td>0.821</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount[5]</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>4</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>1.301</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s9 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>2.400</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>I2</td>
+<td>In</td>
+<td>-</td>
+<td>2.880</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s5 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>0.822</td>
+<td>3.702</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>I1</td>
+<td>In</td>
+<td>-</td>
+<td>4.182</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/LineCount_14_s3 </td>
+<td>LUT4</td>
+<td>F</td>
+<td>Out</td>
+<td>1.099</td>
+<td>5.281</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LineCount_14</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>27</td>
+</tr>
+<tr>
+<td>\D1/n92_s1 </td>
+<td>LUT3</td>
+<td>I0</td>
+<td>In</td>
+<td>-</td>
+<td>5.761</td>
+<td>-</td>
+</tr>
+<tr>
+<td>\D1/n92_s1 </td>
+<td>LUT3</td>
+<td>F</td>
+<td>Out</td>
+<td>1.032</td>
+<td>6.793</td>
+<td>-</td>
+</tr>
+<tr>
+<td>n92_5</td>
+<td>Net</td>
+<td>-</td>
+<td>-</td>
+<td>0.480</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\D1/PixelCount_6_s0 </td>
+<td>DFFC</td>
+<td>D</td>
+<td>In</td>
+<td>-</td>
+<td>7.273</td>
+<td>-</td>
+</tr>
+</table><br/>
+<b>Total Path Delay: </b>7.273<br/>
+<b>Logic Delay: </b>4.510(62.0%)<br/>
+<b>Route Delay: </b>2.763(38.0%)<br/>
+<br/><br/>
+<h1><a name="summary">Summary</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Total Warnings:</b></td> 
+<td>0</td>
+</tr>
+<tr>
+<td class="label"><b>Total Informations:</b></td> 
+<td>25</td>
+</tr>
+</table><br/>
+<b>Synthesis completed successfully!</b><br/>
+Process took 0h:0m:2s realtime, 0h:0m:2s cputime
+<br/>
+Memory peak: 71.6MB
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

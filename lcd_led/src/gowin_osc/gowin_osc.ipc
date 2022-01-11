@@ -1,0 +1,11 @@
+[General]
+ipc_version=4
+file=gowin_osc
+module=Gowin_OSC
+target_device=gw1nr9c-004
+type=clock_osc
+version=3.0
+
+[Config]
+FREQ=10
+LANG=0

@@ -1,0 +1,10 @@
+-d E:\FPGA\Tang_nano_9K_LCD\impl\gwsynthesis\Tang_nano_9K_LCD.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst E:\FPGA\Tang_nano_9K_LCD\src\Tang_nano_9K_LCD.cst
+-cfg E:\FPGA\Tang_nano_9K_LCD\impl\pnr\device.cfg
+-sdc E:\FPGA\Tang_nano_9K_LCD\src\Tang_nano_9K_LCD.sdc
+-bit
+-tr
+-ph
+-timing

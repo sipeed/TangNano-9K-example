@@ -1,0 +1,23 @@
+
+Starting:    C:\Gowin\Gowin_V1.9.6.02Beta\SynplifyPro\bin64\mbin\synbatch.exe
+Install:     C:\Gowin\Gowin_V1.9.6.02Beta\SynplifyPro
+Hostname:    DESKTOP-VS9SDJU
+Date:        Thu Nov  4 11:17:00 2021
+Version:     Q-2020.03G-Beta1
+
+Arguments:   -product synplify_pro -batch -licensetype synplifypro_gowin E:/FPGA/Tang_nano_9K_LCD/impl/synthesize/Tang_nano_9K_LCD.prj
+ProductType: synplify_pro
+
+No such feature exists.
+Feature:       synplifypro_gowin
+License path:  C:\flexlm\LICENSE.TXT;
+FlexNet Licensing error:-5,234
+
+License for feature synplifypro_gowin is not available.
+
+Host ID:  "1831bf25dd12 a8a15910e5d9 b4d5bdd45d2d b4d5bdd45d2e b6d5bdd45d2d 005056c00001 005056c00008 b4d5bdd45d31 00155d43faac 00155d0e4d61 d60100000000 000000000000"
+Please contact support at https://solvnetplus.synopsys.com/ManageCase?ccf=1
+
+
+Running in Vendor Mode
+
