@@ -1,7 +1,7 @@
 //
 //Written by GowinSynthesis
 //Product Version "GowinSynthesis V1.9.6.02Beta"
-//Fri Dec 31 10:02:23 2021
+//Mon Jan 10 14:33:45 2022
 
 //Source file index table:
 //file0 "\E:/FPGA/Tang_nano_9K_LCD/src/TOP.v"
@@ -4719,6 +4719,7 @@ defparam n52_s3.INIT=16'h8000;
 endmodule /* VGAMod */
 module TOP (
   Reset_Button,
+  User_Button,
   XTAL_IN,
   LCD_CLK,
   LCD_HYNC,
@@ -4727,13 +4728,11 @@ module TOP (
   LCD_R,
   LCD_G,
   LCD_B,
-  User_Button,
-  LED,
-  SPILCD_LED,
-  TF_LED
+  LED
 )
 ;
 input Reset_Button;
+input User_Button;
 input XTAL_IN;
 output LCD_CLK;
 output LCD_HYNC;
@@ -4742,10 +4741,7 @@ output LCD_DEN;
 output [4:0] LCD_R;
 output [5:0] LCD_G;
 output [4:0] LCD_B;
-input User_Button;
 output [5:0] LED;
-output [4:0] SPILCD_LED;
-output [3:0] TF_LED;
 wire Reset_Button_d;
 wire XTAL_IN_d;
 wire n137_4;
@@ -5086,8 +5082,6 @@ wire LCD_HSYNC_9;
 wire LCD_VSYNC_11;
 wire [21:0] counter;
 wire [5:0] LED_d;
-wire [4:0] SPILCD_LED_d;
-wire [3:0] TF_LED_d;
 wire [4:0] LCD_B_d;
 wire [5:0] LCD_G_d;
 wire [4:0] LCD_R_d;
@@ -5205,42 +5199,6 @@ wire GND;
   OBUF LED_5_obuf (
     .O(LED[5]),
     .I(LED_d[5]) 
-);
-  OBUF SPILCD_LED_0_obuf (
-    .O(SPILCD_LED[0]),
-    .I(SPILCD_LED_d[0]) 
-);
-  OBUF SPILCD_LED_1_obuf (
-    .O(SPILCD_LED[1]),
-    .I(SPILCD_LED_d[1]) 
-);
-  OBUF SPILCD_LED_2_obuf (
-    .O(SPILCD_LED[2]),
-    .I(SPILCD_LED_d[2]) 
-);
-  OBUF SPILCD_LED_3_obuf (
-    .O(SPILCD_LED[3]),
-    .I(SPILCD_LED_d[3]) 
-);
-  OBUF SPILCD_LED_4_obuf (
-    .O(SPILCD_LED[4]),
-    .I(SPILCD_LED_d[4]) 
-);
-  OBUF TF_LED_0_obuf (
-    .O(TF_LED[0]),
-    .I(TF_LED_d[0]) 
-);
-  OBUF TF_LED_1_obuf (
-    .O(TF_LED[1]),
-    .I(TF_LED_d[1]) 
-);
-  OBUF TF_LED_2_obuf (
-    .O(TF_LED[2]),
-    .I(TF_LED_d[2]) 
-);
-  OBUF TF_LED_3_obuf (
-    .O(TF_LED[3]),
-    .I(TF_LED_d[3]) 
 );
   DFFC counter_21_s0 (
     .Q(counter[21]),
@@ -5374,105 +5332,42 @@ wire GND;
     .CLK(XTAL_IN_d),
     .CLEAR(n28_6) 
 );
-  DFFPE temp1_4_s0 (
+  DFFPE LED_4_s1 (
     .Q(LED_d[4]),
     .D(LED_d[3]),
     .CLK(XTAL_IN_d),
     .CE(n137_4),
     .PRESET(n28_6) 
 );
-  DFFPE temp1_3_s0 (
+  DFFPE LED_3_s1 (
     .Q(LED_d[3]),
     .D(LED_d[2]),
     .CLK(XTAL_IN_d),
     .CE(n137_4),
     .PRESET(n28_6) 
 );
-  DFFPE temp1_2_s0 (
+  DFFPE LED_2_s1 (
     .Q(LED_d[2]),
     .D(LED_d[1]),
     .CLK(XTAL_IN_d),
     .CE(n137_4),
     .PRESET(n28_6) 
 );
-  DFFPE temp1_1_s0 (
+  DFFPE LED_1_s1 (
     .Q(LED_d[1]),
     .D(LED_d[0]),
     .CLK(XTAL_IN_d),
     .CE(n137_4),
     .PRESET(n28_6) 
 );
-  DFFCE temp1_0_s0 (
+  DFFCE LED_0_s1 (
     .Q(LED_d[0]),
     .D(LED_d[5]),
     .CLK(XTAL_IN_d),
     .CE(n137_4),
     .CLEAR(n28_6) 
 );
-  DFFPE temp2_4_s0 (
-    .Q(SPILCD_LED_d[4]),
-    .D(SPILCD_LED_d[3]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .PRESET(n28_6) 
-);
-  DFFPE temp2_3_s0 (
-    .Q(SPILCD_LED_d[3]),
-    .D(SPILCD_LED_d[2]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .PRESET(n28_6) 
-);
-  DFFPE temp2_2_s0 (
-    .Q(SPILCD_LED_d[2]),
-    .D(SPILCD_LED_d[1]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .PRESET(n28_6) 
-);
-  DFFPE temp2_1_s0 (
-    .Q(SPILCD_LED_d[1]),
-    .D(SPILCD_LED_d[0]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .PRESET(n28_6) 
-);
-  DFFCE temp2_0_s0 (
-    .Q(SPILCD_LED_d[0]),
-    .D(SPILCD_LED_d[4]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .CLEAR(n28_6) 
-);
-  DFFPE temp3_3_s0 (
-    .Q(TF_LED_d[3]),
-    .D(TF_LED_d[2]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .PRESET(n28_6) 
-);
-  DFFPE temp3_2_s0 (
-    .Q(TF_LED_d[2]),
-    .D(TF_LED_d[1]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .PRESET(n28_6) 
-);
-  DFFPE temp3_1_s0 (
-    .Q(TF_LED_d[1]),
-    .D(TF_LED_d[0]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .PRESET(n28_6) 
-);
-  DFFCE temp3_0_s0 (
-    .Q(TF_LED_d[0]),
-    .D(TF_LED_d[3]),
-    .CLK(XTAL_IN_d),
-    .CE(n137_4),
-    .CLEAR(n28_6) 
-);
-  DFFPE temp1_5_s0 (
+  DFFPE LED_5_s2 (
     .Q(LED_d[5]),
     .D(LED_d[4]),
     .CLK(XTAL_IN_d),

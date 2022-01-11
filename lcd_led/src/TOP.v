@@ -1,6 +1,7 @@
 module TOP
 (
 	input			Reset_Button,
+    input           User_Button,
     input           XTAL_IN,
 
 	output			LCD_CLK,
@@ -10,13 +11,9 @@ module TOP
 	output	[4:0]	LCD_R,
 	output	[5:0]	LCD_G,
 	output	[4:0]	LCD_B,
-    input           User_Button,
-    output  [5:0]   LED,
-    output  [4:0]   SPILCD_LED,
-    output  [3:0]   TF_LED
+
+    output  [5:0]   LED
 );
-
-
 
 
 	wire		CLK_SYS;
@@ -25,11 +22,19 @@ module TOP
     wire        oscout_o;
 
 
-/* //使用内部时钟
+/*  
+    //Use internal clock
     Gowin_OSC chip_osc(
         .oscout(oscout_o) //output oscout
     );
 */
+
+/*
+    This program uses external crystal oscillator and PLL to generate 33.33mhz clock to the screen
+    If you use our 4.3-inch screen, you need to modify the PLL parameters (tools - > IP core generator) 
+    to make CLK_ Pix is between 8-12mhz (according to the specification of the screen)
+*/
+
     Gowin_rPLL chip_pll
     (
         .clkout(CLK_SYS), //output clkout      //200M
@@ -41,7 +46,7 @@ module TOP
 	VGAMod	D1
 	(
 		.CLK		(	CLK_SYS     ),
-		.nRST		(	Reset_Button		),
+		.nRST		(	Reset_Button),
 
 		.PixelClk	(	CLK_PIX		),
 		.LCD_DE		(	LCD_DEN	 	),
@@ -57,18 +62,10 @@ module TOP
 
 
 
-
-
-/*LED///////////////////////////////////////////////////////////////////////////*/
-
+//LED drive
     reg     [31:0]  counter;
-/*    reg     [5:0]   LED;
-    reg     [4:0]   SPILCD_LED;
-    reg     [3:0]   TF_LED;*/
+    reg     [5:0]   LED;
 
-    reg     [5:0]   temp1;
-    reg     [4:0]   temp2;
-    reg     [3:0]   temp3;    
 
     always @(posedge XTAL_IN or negedge Reset_Button) begin
     if (!Reset_Button)
@@ -81,43 +78,11 @@ module TOP
 
     always @(posedge XTAL_IN or negedge Reset_Button) begin
     if (!Reset_Button)
-        temp1 <= 6'b111110;       
+        LED <= 6'b111110;       
     else if (counter == 24'd400_0000)       // 0.5s delay
-        temp1[5:0] <= {temp1[4:0],temp1[5]};        
+        LED[5:0] <= {LED[4:0],LED[5]};        
     else
-        temp1 <= temp1;
+        LED <= LED;
     end
-
-    always @(posedge XTAL_IN or negedge Reset_Button) begin
-    if (!Reset_Button)
-        temp2 <= 5'b11110;
-    else if (counter == 24'd400_0000)       // 0.5s delay
-        temp2[4:0] <= {temp2[3:0],temp2[4]};
-    else
-        temp2 <= temp2;
-    end
-
-    always @(posedge XTAL_IN or negedge Reset_Button) begin
-    if (!Reset_Button)
-        temp3 <=4'b1110;
-    else if (counter == 24'd400_0000)       // 0.5s delay
-        temp3[3:0] <= {temp3[2:0],temp3[3]};
-    else
-        temp3 <= temp3;
-    end
-
-    assign LED = temp1;
-    assign SPILCD_LED = temp2;
-    assign TF_LED = temp3;
-
-/*    LED LED_test
-    (
-        .XTAL_IN    (   27M_clk     ),
-        .Reset_Button  (   Button_rst_n),
-        .LED        (   LED        ),
-    );
-*/
-
-
 
 endmodule
