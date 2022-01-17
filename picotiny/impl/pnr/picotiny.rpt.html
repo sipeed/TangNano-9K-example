@@ -1,0 +1,1407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>PnR Analysis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper{ width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td { white-space:pre; border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.thermal_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.Configure_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table th.label {  min-width: 8%; width: 8%; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#Message" style=" font-size: 16px;">PnR Messages</a></li>
+<!--<li><a href="#Summary" style=" font-size: 16px;">PnR Summaries</a></li>-->
+<li><a href="#PnR_Details" style=" font-size: 16px;">PnR Details</a>
+<ul>
+<li><a href="#Placer" style=" font-size: 14px;">Placer</a></li>
+<li><a href="#Resource_Usage_Summary" style=" font-size: 14px;">Resource Usage Summary</a></li>
+<li><a href="#I/O_Bank_Usage_Summary" style=" font-size: 14px;">I/O Bank Usage Summary</a></li>
+<li><a href="#Router" style=" font-size: 14px;">Router</a></li>
+<li><a href="#Global_Clock_Usage_Summary" style=" font-size: 14px;">Global Clock Usage Summary</a></li>
+<li><a href="#Global_Clock_Signals" style=" font-size: 14px;">Global Clock Signals</a></li>
+<li><a href="#Pinout_by_Port_Name" style=" font-size: 14px;">Pinout by Port Name</a></li>
+<li><a href="#All_Package_Pins" style=" font-size: 14px;">All Package Pins</a></li>
+<li><a href="#Memory_Usage" style=" font-size: 14px;">Memory Usage</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="Message">PnR Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>Gowin PnR Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>E:\FPGA\picotiny\picotiny\impl\gwsynthesis\picotiny.vg</td>
+</tr>
+<tr>
+<td class="label">Physical Constraints File</td>
+<td>E:\FPGA\picotiny\picotiny\src\picotiny.cst</td>
+</tr>
+<tr>
+<td class="label">Timing Constraints File</td>
+<td>E:\FPGA\picotiny\picotiny\src\picotiny.sdc</td>
+</tr>
+<tr>
+<td class="label">GOWIN Version</td>
+<td>V1.9.6.02Beta</td>
+</tr>
+<tr>
+<td class="label">Part Number</td>
+<td>GW1NR-LV9QN88PC6/I5</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Wed Dec 22 17:10:02 2021
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2020 Gowin Semiconductor Corporation. All rights reserved.</td>
+</tr>
+</table>
+<h1><a name="PnR_Details">PnR Details</a></h1>
+<!--<h1><a name="Summary">PnR Summaries</a></h1>-->
+<h2><a name="Placer">Placer:</a></h2>
+<p style="font-size: 14px;">Starting Placer:</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 0 ...  &nbsp  REAL time: 2.142 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 1 ...  &nbsp  REAL time: 0.124 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 2 ...  &nbsp  REAL time: 2.034 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 3 ...  &nbsp  REAL time: 3.016 secs</p>
+<p style="font-size: 14px;">Total REAL time to Placement completion: 7.316 secs.<p><br/>
+<h2><a name="Resource_Usage_Summary">Resource Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Resource</b></td>
+<td><b>Usage</b></td>
+<td><b>Utilization</b></td>
+</tr>
+<tr>
+<td class="label">Logic</td>
+<td>3577/8640</td>
+<td>41%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
+<td>3427(2794 LUT, 633 ALU, 0 ROM16)</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --SSRAM(RAM16)</td>
+<td>25</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">Register</td>
+<td>1454/6771</td>
+<td>21%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --logic Register</td>
+<td>1453/6480</td>
+<td>22%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --I/O Register</td>
+<td>1/291</td>
+<td>1%</td>
+</tr>
+<tr>
+<td class="label">CLS</td>
+<td>2099/4320</td>
+<td>48%</td>
+</tr>
+<tr>
+<td class="label">I/O Port</td>
+<td>19</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">I/O Buf</td>
+<td>15</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Input Buf</td>
+<td>3</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Output Buf</td>
+<td>5</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Inout Buf</td>
+<td>7</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">IOLOGIC</td>
+<td>3 OSER10<br/></td>
+<td>6%</td>
+</tr>
+<tr>
+<td class="label">BSRAM</td>
+<td>4 SP<br/>10 SDPB<br/>1 DPB<br/></td>
+<td>57%</td>
+</tr>
+<tr>
+<td class="label">DSP</td>
+<td>0</td><td>0%</td>
+</tr>
+<tr>
+<td class="label">PLL</td>
+<td>1/2</td>
+<td>50%</td>
+</tr>
+<tr>
+<td class="label">DCS</td>
+<td>0/8</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">DQCE</td>
+<td>0/24</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">OSC</td>
+<td>0/1</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">User Flash</td>
+<td>0/1</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">CLKDIV</td>
+<td>1/8</td>
+<td>12%</td>
+</tr>
+<tr>
+<td class="label">DLLDLY</td>
+<td>0/8</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">DHCEN</td>
+<td>0/8</td>
+<td>0%</td>
+</tr>
+</table>
+<h2><a name="I/O_Bank_Usage_Summary">I/O Bank Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>I/O Bank</b></td>
+<td><b>Usage</b></td>
+</tr>
+<tr>
+<td class="label">bank 1</td>
+<td>5/25(20%)</td>
+</tr>
+<tr>
+<td class="label">bank 2</td>
+<td>2/23(8%)</td>
+</tr>
+<tr>
+<td class="label">bank 3</td>
+<td>8/49(16%)</td>
+</tr>
+</table>
+<br/>
+<h2><a name="Router">Router:</a></h2>
+<p  style="font-size: 14px;">Starting Router:</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 0: 6252 unrouted; &nbsp REAL time: 0.002 secs</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 1: 3933 unrouted; &nbsp REAL time: 2.529 secs</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 2: 0 unrouted; &nbsp REAL time: 1.992 secs</p>
+<p  style="font-size: 14px;">  Total REAL time to Router completion: 4.523 secs.</p><br/>
+<h2><a name="Global_Clock_Usage_Summary">Global Clock Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Global Clock</b></td>
+<td><b>Usage</b></td>
+</tr>
+<tr>
+<td class="label">PRIMARY</td>
+<td>1/8(12%)</td>
+</tr>
+<tr>
+<td class="label">SECONDARY</td>
+<td>4/8(50%)</td>
+</tr>
+<tr>
+<td class="label">GCLK_PIN</td>
+<td>2/4(50%)</td>
+</tr>
+<tr>
+<td class="label">PLL</td>
+<td>1/2(50%)</td>
+</tr>
+<tr>
+<td class="label">CLKDIV</td>
+<td>1/8(12%)</td>
+</tr>
+<tr>
+<td class="label">DLLDLY</td>
+<td>0/8(0%)</td>
+</tr>
+</table>
+<br/>
+<h2><a name="Global_Clock_Signals">Global Clock Signals:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Signal</b></td>
+<td><b>Global Clock</b></td>
+<td><b>Location</b></td>
+</tr>
+<tr>
+<td class="label">clk_p</td>
+<td>PRIMARY</td>
+<td> TR TL BR BL</td>
+</tr>
+<tr>
+<td class="label">n6_7</td>
+<td>SECONDARY</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">n3555_3</td>
+<td>SECONDARY</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">cpu_state.cpu_state_fetch</td>
+<td>SECONDARY</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">n142_5</td>
+<td>SECONDARY</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">clk_d</td>
+<td>HCLK</td>
+<td>LEFT[0]</td>
+</tr>
+<tr>
+<td class="label">clk_p5</td>
+<td>HCLK</td>
+<td>TOP[0]</td>
+</tr>
+</table>
+<br/>
+<h2><a name="Pinout_by_Port_Name">Pinout by Port Name:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Port Name</b></td>
+<td><b>Loc./Bank</b></td>
+<td><b>Dir.</b></td>
+<td><b>Site</b></td>
+<td><b>IO Type</b></td>
+<td><b>Drive</b></td>
+<td><b>Pull Mode</b></td>
+<td><b>Slew Rate</b></td>
+<td><b>PCI Clamp</b></td>
+<td><b>OpenDrain</b></td>
+<td><b>VREF</b></td>
+<td><b>BankVccio</b></td>
+</tr>
+<tr>
+<td class="label">clk</td>
+<td>52/1</td>
+<td>in</td>
+<td>IOR17[A]</td>
+<td>LVCMOS33</td>
+<td>NA</td>
+<td>UP</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">resetn</td>
+<td>4/3</td>
+<td>in</td>
+<td>IOL5[A]</td>
+<td>LVCMOS18</td>
+<td>NA</td>
+<td>UP</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td class="label">ser_rx</td>
+<td>18/2</td>
+<td>in</td>
+<td>IOB2[B]</td>
+<td>LVCMOS33</td>
+<td>NA</td>
+<td>UP</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">tmds_clk_n</td>
+<td>68/1</td>
+<td>out</td>
+<td>IOT42[B]</td>
+<td>LVCMOS33D</td>
+<td>8</td>
+<td>NA</td>
+<td>FAST</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">tmds_clk_p</td>
+<td>69/1</td>
+<td>out</td>
+<td>IOT42[A]</td>
+<td>LVCMOS33D</td>
+<td>8</td>
+<td>NA</td>
+<td>FAST</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">tmds_d_n[0]</td>
+<td>70/1</td>
+<td>out</td>
+<td>IOT41[B]</td>
+<td>LVCMOS33D</td>
+<td>8</td>
+<td>NA</td>
+<td>FAST</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">tmds_d_n[1]</td>
+<td>72/1</td>
+<td>out</td>
+<td>IOT39[B]</td>
+<td>LVCMOS33D</td>
+<td>8</td>
+<td>NA</td>
+<td>FAST</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">tmds_d_n[2]</td>
+<td>74/1</td>
+<td>out</td>
+<td>IOT38[B]</td>
+<td>LVCMOS33D</td>
+<td>8</td>
+<td>NA</td>
+<td>FAST</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">tmds_d_p[0]</td>
+<td>71/1</td>
+<td>out</td>
+<td>IOT41[A]</td>
+<td>LVCMOS33D</td>
+<td>8</td>
+<td>NA</td>
+<td>FAST</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">tmds_d_p[1]</td>
+<td>73/1</td>
+<td>out</td>
+<td>IOT39[A]</td>
+<td>LVCMOS33D</td>
+<td>8</td>
+<td>NA</td>
+<td>FAST</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">tmds_d_p[2]</td>
+<td>75/1</td>
+<td>out</td>
+<td>IOT38[A]</td>
+<td>LVCMOS33D</td>
+<td>8</td>
+<td>NA</td>
+<td>FAST</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">ser_tx</td>
+<td>17/2</td>
+<td>out</td>
+<td>IOB2[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>FAST</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">gpio[0]</td>
+<td>10/3</td>
+<td>io</td>
+<td>IOL15[A]</td>
+<td>LVCMOS18</td>
+<td>8</td>
+<td>UP</td>
+<td>FAST</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td class="label">gpio[1]</td>
+<td>11/3</td>
+<td>io</td>
+<td>IOL16[B]</td>
+<td>LVCMOS18</td>
+<td>8</td>
+<td>UP</td>
+<td>FAST</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td class="label">gpio[2]</td>
+<td>13/3</td>
+<td>io</td>
+<td>IOL21[B]</td>
+<td>LVCMOS18</td>
+<td>8</td>
+<td>UP</td>
+<td>FAST</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td class="label">gpio[3]</td>
+<td>14/3</td>
+<td>io</td>
+<td>IOL22[B]</td>
+<td>LVCMOS18</td>
+<td>8</td>
+<td>UP</td>
+<td>FAST</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td class="label">gpio[4]</td>
+<td>15/3</td>
+<td>io</td>
+<td>IOL25[B]</td>
+<td>LVCMOS18</td>
+<td>8</td>
+<td>UP</td>
+<td>FAST</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td class="label">gpio[5]</td>
+<td>16/3</td>
+<td>io</td>
+<td>IOL26[B]</td>
+<td>LVCMOS18</td>
+<td>8</td>
+<td>UP</td>
+<td>FAST</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td class="label">gpio[6]</td>
+<td>3/3</td>
+<td>io</td>
+<td>IOT2[A]</td>
+<td>LVCMOS18</td>
+<td>8</td>
+<td>UP</td>
+<td>FAST</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>1.8</td>
+</tr>
+</table>
+<br/>
+<h2><a name="All_Package_Pins">All Package Pins:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Loc./Bank</b></td>
+<td><b>Signal</b></td>
+<td><b>Dir.</b></td>
+<td><b>Site</b></td>
+<td><b>IO Type</b></td>
+<td><b>Pull Mode</b></td>
+<td><b>OpenDrain</b></td>
+<td><b>Hysteresis</b></td>
+<td><b>DiffResistor</b></td>
+<td><b>SingleResistor</b></td>
+</tr>
+<td class="label">3/3</td>
+<td>gpio[6]</td>
+<td>io</td>
+<td>IOT2[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">88/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT5[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">87/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT6[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">86/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT8[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">85/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT8[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">84/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT10[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">83/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT10[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">82/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT11[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">81/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT11[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">80/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT12[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">79/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT12[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">77/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT37[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">76/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOT37[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">75/1</td>
+<td>tmds_d_p[2]</td>
+<td>out</td>
+<td>IOT38[A]</td>
+<td>LVCMOS33D</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">74/1</td>
+<td>tmds_d_n[2]</td>
+<td>out</td>
+<td>IOT38[B]</td>
+<td>LVCMOS33D</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">73/1</td>
+<td>tmds_d_p[1]</td>
+<td>out</td>
+<td>IOT39[A]</td>
+<td>LVCMOS33D</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">72/1</td>
+<td>tmds_d_n[1]</td>
+<td>out</td>
+<td>IOT39[B]</td>
+<td>LVCMOS33D</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">71/1</td>
+<td>tmds_d_p[0]</td>
+<td>out</td>
+<td>IOT41[A]</td>
+<td>LVCMOS33D</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">70/1</td>
+<td>tmds_d_n[0]</td>
+<td>out</td>
+<td>IOT41[B]</td>
+<td>LVCMOS33D</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">69/1</td>
+<td>tmds_clk_p</td>
+<td>out</td>
+<td>IOT42[A]</td>
+<td>LVCMOS33D</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">68/1</td>
+<td>tmds_clk_n</td>
+<td>out</td>
+<td>IOT42[B]</td>
+<td>LVCMOS33D</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">17/2</td>
+<td>ser_tx</td>
+<td>out</td>
+<td>IOB2[A]</td>
+<td>LVCMOS33</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">18/2</td>
+<td>ser_rx</td>
+<td>in</td>
+<td>IOB2[B]</td>
+<td>LVCMOS33</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">19/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB4[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">20/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB4[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">25/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB8[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">26/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB8[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">27/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB11[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">28/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB11[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">29/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB13[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">30/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB13[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">31/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB15[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">32/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB15[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">33/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB23[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">34/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB23[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">35/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB29[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">36/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB29[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">37/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB31[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">38/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB31[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">39/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB33[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">40/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB33[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">41/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB41[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">42/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB41[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">47/2</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOB43[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">4/3</td>
+<td>resetn</td>
+<td>in</td>
+<td>IOL5[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">5/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOL11[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">6/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOL11[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">7/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOL12[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">8/3</td>
+<td>UNUSED</td>
+<td>out</td>
+<td>IOL13[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">9/3</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOL13[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">10/3</td>
+<td>gpio[0]</td>
+<td>io</td>
+<td>IOL15[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">11/3</td>
+<td>gpio[1]</td>
+<td>io</td>
+<td>IOL16[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">13/3</td>
+<td>gpio[2]</td>
+<td>io</td>
+<td>IOL21[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">14/3</td>
+<td>gpio[3]</td>
+<td>io</td>
+<td>IOL22[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">15/3</td>
+<td>gpio[4]</td>
+<td>io</td>
+<td>IOL25[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">16/3</td>
+<td>gpio[5]</td>
+<td>io</td>
+<td>IOL26[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">63/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR5[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">62/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR11[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">61/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR11[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">60/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR12[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">59/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR12[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">57/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR13[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">56/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR14[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">55/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR14[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">54/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR15[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">53/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR15[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">52/1</td>
+<td>clk</td>
+<td>in</td>
+<td>IOR17[A]</td>
+<td>LVCMOS33</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>OFF</td>
+</tr>
+<td class="label">51/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR17[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">50/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR22[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">49/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR24[A]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<td class="label">48/1</td>
+<td>UNUSED</td>
+<td>in</td>
+<td>IOR24[B]</td>
+<td>LVCMOS18</td>
+<td>UP</td>
+<td>NA</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+</table>
+<br/>
+<p style="font-size: 16px;"><b>  Placement and routing completed.</b></p>
+<p style="font-size: 16px;"><b><a name="Memory_Usage">Memory usage: 158MB.</a></b></p>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

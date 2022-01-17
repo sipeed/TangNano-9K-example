@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ENhttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Power Analysis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper { width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td {white-space:pre;  border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.thermal_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.Configure_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table th.label {  min-width: 8%; width: 8%; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#Message" style=" font-size: 16px;">Power Messages</a>
+</li>
+<li><a href="#Summary" style=" font-size: 16px;">Power Summary</a>
+<ul>
+<li><a href="#Power_Info" style=" font-size: 14px;">Power Information</a></li>
+<li><a href="#Thermal_Info" style=" font-size: 14px;">Thermal Information</a></li>
+<li><a href="#Configure_Info" style=" font-size: 14px;">Configure Information</a></li>
+<li><a href="#Supply_Summary" style=" font-size: 14px;">Supply Information</a></li>
+</ul>
+</li>
+<li><a href="#Detail" style=" font-size: 16px;">Power Details</a>
+<ul>
+<li><a href="#By_Block_Type" style=" font-size: 14px;">Power By Block Type</a></li>
+<li><a href="#By_Hierarchy" style=" font-size: 14px;">Power By Hierarchy</a></li>
+<li><a href="#By_Clock_Domain" style=" font-size: 14px;">Power By Clock Domain</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="Message">Power Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>Gowin Power Analysis Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>E:\FPGA\picotiny\picotiny\impl\gwsynthesis\picotiny.vg</td>
+</tr>
+<tr>
+<td class="label">Physical Constraints File</td>
+<td>E:\FPGA\picotiny\picotiny\src\picotiny.cst</td>
+</tr>
+<tr>
+<td class="label">Timing Constraints File</td>
+<td>E:\FPGA\picotiny\picotiny\src\picotiny.sdc</td>
+</tr>
+<tr>
+<td class="label">GOWIN Version</td>
+<td>V1.9.6.02Beta</td>
+</tr>
+<tr>
+<td class="label">Part Number</td>
+<td>GW1NR-LV9QN88PC6/I5</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Wed Dec 22 17:10:02 2021
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2020 Gowin Semiconductor Corporation. All rights reserved.</td>
+</tr>
+</table>
+<h1><a name="Summary">Power Summary</a></h1>
+<h2><a name="Power_Info">Power Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Total Power (mW)</td>
+<td>45.220</td>
+</tr>
+<tr>
+<td class="label">Quiescent Power (mW)</td>
+<td>3.544</td>
+</tr>
+<tr>
+<td class="label">Dynamic Power (mW)</td>
+<td>41.676</td>
+</tr>
+<tr>
+<td class="label">Psram Power (mW)</td>
+<td>86.000</td>
+</tr>
+</table>
+<h2><a name="Thermal_Info">Thermal Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Junction Temperature</td>
+<td>25.473</td>
+</tr>
+<tr>
+<td class="label">Theta JA</td>
+<td>10.500</td>
+</tr>
+<tr>
+<td class="label">Max Allowed Ambient Temperature</td>
+<td>84.525</td>
+</tr>
+</table>
+<h2><a name="Configure_Info">Configure Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Default IO Toggle Rate</td>
+<td>0.125</td>
+</tr>
+<td class="label">Default Remain Toggle Rate</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td class="label">Use Vectorless Estimation</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Filter Glitches</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Related Vcd File</td>
+<td></td>
+</tr>
+<tr>
+<td class="label">Related Saif File</td>
+<td></td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta JA</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Air Flow</td>
+<td>LFM_0</td>
+</tr>
+<tr>
+<td class="label">Heat Sink</td>
+<td>None</td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta SA</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Board Thermal Model</td>
+<td>None</td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta JB</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Ambient Temperature</td>
+<td>25.000
+</tr>
+</table>
+<h2><a name="Supply_Summary">Supply Information:</a></h2>
+<table class="summary_table">
+<tr>
+<th class="label">Voltage Source</th>
+<th class="label">Voltage</th>
+<th class="label">Dynamic Current(mA)</th>
+<th class="label">Quiescent Current(mA)</th>
+<th class="label">Power(mW)</th>
+</tr>
+<tr>
+<td>VCC</td>
+<td>1.200</td>
+<td>33.697</td>
+<td>2.329</td>
+<td>43.231</td>
+</tr>
+<tr>
+<td>VCCX</td>
+<td>2.500</td>
+<td>0.219</td>
+<td>0.142</td>
+<td>0.903</td>
+</tr>
+<tr>
+<td>VCCO18</td>
+<td>1.800</td>
+<td>0.021</td>
+<td>0.047</td>
+<td>0.123</td>
+</tr>
+<tr>
+<td>VCCO33</td>
+<td>3.300</td>
+<td>0.198</td>
+<td>0.094</td>
+<td>0.964</td>
+</tr>
+</table>
+<h1><a name="Detail">Power Details</a></h1>
+<h2><a name="By_Block_Type">Power By Block Type:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Block Type</th>
+<th class="label">Total Power(mW)</th>
+<th class="label">Static Power(mW)</th>
+<th class="label">Average Toggle Rate(millions of transitions/sec)</th>
+</tr>
+<tr>
+<td>Logic</td>
+<td>5.074</td>
+<td>NA</td>
+<td>3.150</td>
+</tr>
+<tr>
+<td>IO</td>
+<td>2.436
+<td>0.920
+<td>5.952
+</tr>
+<tr>
+<td>BSRAM</td>
+<td>10.370
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>PLL</td>
+<td>3.515
+<td>NA</td>
+<td>NA</td>
+</tr>
+</table>
+<h2><a name="By_Hierarchy">Power By Hierarchy:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Hierarchy Entity</th>
+<th class="label">Total Power(mW)</th>
+<th class="label">Block Dynamic Power(mW)</th>
+<th class="label">Routing Dynamic Power(mW)</th>
+</tr>
+<tr>
+<td>picotiny</td>
+<td>32.617</td>
+<td>11.411(11.410)</td>
+<td>21.206(21.135)</td>
+<tr>
+<td>picotiny/u_PicoMem_GPIO/</td>
+<td>0.591</td>
+<td>0.069(0.000)</td>
+<td>0.522(0.000)</td>
+<tr>
+<td>picotiny/u_PicoMem_Mux_1_4_8/</td>
+<td>0.665</td>
+<td>0.066(0.000)</td>
+<td>0.599(0.000)</td>
+<tr>
+<td>picotiny/u_PicoMem_SRAM_EG4_16KB_7/</td>
+<td>1.120</td>
+<td>0.930(0.000)</td>
+<td>0.190(0.000)</td>
+<tr>
+<td>picotiny/u_PicoMem_UART/</td>
+<td>1.629</td>
+<td>0.519(0.516)</td>
+<td>1.110(1.073)</td>
+<tr>
+<td>picotiny/u_PicoMem_UART/u_simpleuart/</td>
+<td>1.588</td>
+<td>0.516(0.000)</td>
+<td>1.073(0.000)</td>
+<tr>
+<td>picotiny/u_Reset_Sync/</td>
+<td>0.076</td>
+<td>0.021(0.000)</td>
+<td>0.055(0.000)</td>
+<tr>
+<td>picotiny/u_boot_sram/</td>
+<td>0.521</td>
+<td>0.346(0.344)</td>
+<td>0.175(0.146)</td>
+<tr>
+<td>picotiny/u_boot_sram/u_sram_0/</td>
+<td>0.122</td>
+<td>0.086(0.000)</td>
+<td>0.037(0.000)</td>
+<tr>
+<td>picotiny/u_boot_sram/u_sram_1/</td>
+<td>0.123</td>
+<td>0.086(0.000)</td>
+<td>0.037(0.000)</td>
+<tr>
+<td>picotiny/u_boot_sram/u_sram_2/</td>
+<td>0.126</td>
+<td>0.086(0.000)</td>
+<td>0.040(0.000)</td>
+<tr>
+<td>picotiny/u_boot_sram/u_sram_3/</td>
+<td>0.118</td>
+<td>0.086(0.000)</td>
+<td>0.033(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/</td>
+<td>10.617</td>
+<td>2.386(2.382)</td>
+<td>8.231(8.188)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_enc/</td>
+<td>1.133</td>
+<td>0.150(0.000)</td>
+<td>0.983(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_overlay/</td>
+<td>0.898</td>
+<td>0.117(0.083)</td>
+<td>0.781(0.647)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_overlay/svo_buf_in/</td>
+<td>0.268</td>
+<td>0.029(0.020)</td>
+<td>0.239(0.174)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_overlay/svo_buf_in/svo_axis_pipe/</td>
+<td>0.195</td>
+<td>0.020(0.000)</td>
+<td>0.174(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_overlay/svo_buf_out/</td>
+<td>0.398</td>
+<td>0.045(0.036)</td>
+<td>0.353(0.256)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_overlay/svo_buf_out/svo_axis_pipe/</td>
+<td>0.291</td>
+<td>0.036(0.000)</td>
+<td>0.256(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_overlay/svo_buf_over/</td>
+<td>0.063</td>
+<td>0.009(0.006)</td>
+<td>0.055(0.037)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_overlay/svo_buf_over/svo_axis_pipe/</td>
+<td>0.043</td>
+<td>0.006(0.000)</td>
+<td>0.037(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_tcard/</td>
+<td>1.496</td>
+<td>0.212(0.000)</td>
+<td>1.284(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_term/</td>
+<td>4.603</td>
+<td>1.165(0.000)</td>
+<td>3.438(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_tmds_0/</td>
+<td>0.844</td>
+<td>0.246(0.000)</td>
+<td>0.598(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_tmds_1/</td>
+<td>0.809</td>
+<td>0.247(0.000)</td>
+<td>0.562(0.000)</td>
+<tr>
+<td>picotiny/u_hdmi/svo_tmds_2/</td>
+<td>0.788</td>
+<td>0.246(0.000)</td>
+<td>0.542(0.000)</td>
+<tr>
+<td>picotiny/u_picorv32/</td>
+<td>13.602</td>
+<td>3.559(0.000)</td>
+<td>10.043(0.000)</td>
+<tr>
+<td>picotiny/u_pll/</td>
+<td>3.724</td>
+<td>3.515(0.000)</td>
+<td>0.209(0.000)</td>
+</table>
+<h2><a name="By_Clock_Domain">Power By Clock Domain:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Clock Domain</th>
+<th class="label">Clock Frequency(Mhz)</th>
+<th class="label">Total Dynamic Power(mW)</th>
+</tr>
+<tr>
+<td>u_div_5/clkdiv_inst/CLKOUT.default_gen_clk</td>
+<td>25.200</td>
+<td>28.862</td>
+</tr>
+<tr>
+<td>clk_osc</td>
+<td>27.000</td>
+<td>3.541</td>
+</tr>
+<tr>
+<td>u_pll/rpll_inst/CLKOUT.default_gen_clk</td>
+<td>126.000</td>
+<td>0.209</td>
+</tr>
+</table>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

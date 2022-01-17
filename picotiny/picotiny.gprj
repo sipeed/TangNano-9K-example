@@ -1,0 +1,34 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="src/bootram_2kx8_0/bootram_2kx8_0.v" type="file.verilog" enable="1"/>
+        <File path="src/bootram_2kx8_1/bootram_2kx8_1.v" type="file.verilog" enable="1"/>
+        <File path="src/bootram_2kx8_2/bootram_2kx8_2.v" type="file.verilog" enable="1"/>
+        <File path="src/bootram_2kx8_3/bootram_2kx8_3.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_clkdiv/gowin_clkdiv.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_ddr/gowin_ddr.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_rpll/gowin_rpll.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_sp/bootram_4k.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_defines.vh" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_enc.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_hdmi_top.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_openldi.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_pong.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_tcard.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_term.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_tmds.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_utils.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/hdmi/svo_vdma.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/picomemory.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/picoperipheral.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/picorv32.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/picotiny.v" type="file.verilog" enable="1"/>
+        <File path="D:/verilog_wb/gowin/picotiny_test/simpleuart.v" type="file.verilog" enable="1"/>
+        <File path="src/picotiny.cst" type="file.cst" enable="1"/>
+        <File path="src/picotiny.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>

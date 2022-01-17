@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="picotiny" Lut="1">
+    <SubModule name="u_pll"/>
+    <SubModule name="u_div_5"/>
+    <SubModule name="u_Reset_Sync" Register="4" Alu="4" Lut="2"/>
+    <SubModule name="u_picorv32" Register="586" Alu="314" Lut="1205" Bsram="2"/>
+    <SubModule name="u_PicoMem_UART" Lut="5">
+        <SubModule name="u_simpleuart" Register="131" Alu="124" Lut="93"/>
+    </SubModule>
+    <SubModule name="u_PicoMem_GPIO" Register="97" Lut="59"/>
+    <SubModule name="u_boot_sram" Register="1" Lut="3">
+        <SubModule name="u_sram_3" Bsram="1"/>
+        <SubModule name="u_sram_2" Bsram="1"/>
+        <SubModule name="u_sram_1" Bsram="1"/>
+        <SubModule name="u_sram_0" Bsram="1"/>
+    </SubModule>
+    <SubModule name="u_PicoMem_SRAM_EG4_16KB_7" Register="1" Lut="6" Bsram="8"/>
+    <SubModule name="u_PicoMem_Mux_1_4_8" Lut="99"/>
+    <SubModule name="u_hdmi" Register="8" Lut="1">
+        <SubModule name="svo_tcard" Register="121" Lut="255"/>
+        <SubModule name="svo_term" Register="234" Alu="77" Lut="598" Bsram="1"/>
+        <SubModule name="svo_overlay" Lut="51">
+            <SubModule name="svo_buf_in" Register="24" Lut="1">
+                <SubModule name="svo_axis_pipe" Register="48" Lut="5"/>
+            </SubModule>
+            <SubModule name="svo_buf_over" Register="3" Lut="2">
+                <SubModule name="svo_axis_pipe" Register="8" Lut="5"/>
+            </SubModule>
+            <SubModule name="svo_buf_out" Register="24" Lut="1">
+                <SubModule name="svo_axis_pipe" Register="48" Lut="28"/>
+            </SubModule>
+        </SubModule>
+        <SubModule name="svo_enc" Register="61" Alu="6" Lut="106" Ssram="16"/>
+        <SubModule name="svo_tmds_0" Register="19" Alu="36" Lut="95" Ssram="3"/>
+        <SubModule name="svo_tmds_1" Register="18" Alu="36" Lut="97" Ssram="3"/>
+        <SubModule name="svo_tmds_2" Register="18" Alu="36" Lut="95" Ssram="3"/>
+    </SubModule>
+</Module>

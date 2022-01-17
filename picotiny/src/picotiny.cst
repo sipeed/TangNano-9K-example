@@ -1,0 +1,25 @@
+//Copyright (C)2014-2020 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: V1.9.6.02Beta
+//Part Number: GW1NR-LV9QN88PC6/I5
+//Created Time: Wed 12 22 17:09:42 2021
+
+IO_LOC "tmds_d_p[0]" 71,70;
+IO_LOC "tmds_d_p[1]" 73,72;
+IO_LOC "tmds_d_p[2]" 75,74;
+IO_LOC "tmds_clk_p" 69,68;
+IO_LOC "ser_tx" 17;
+IO_PORT "ser_tx" IO_TYPE=LVCMOS33;
+IO_LOC "gpio[6]" 3;
+IO_LOC "gpio[5]" 16;
+IO_LOC "gpio[4]" 15;
+IO_LOC "gpio[3]" 14;
+IO_LOC "gpio[2]" 13;
+IO_LOC "gpio[1]" 11;
+IO_LOC "gpio[0]" 10;
+IO_LOC "ser_rx" 18;
+IO_PORT "ser_rx" IO_TYPE=LVCMOS33;
+IO_LOC "resetn" 4;
+IO_LOC "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS33;
