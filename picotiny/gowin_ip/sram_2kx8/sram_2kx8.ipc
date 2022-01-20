@@ -1,0 +1,16 @@
+[General]
+ipc_version=4
+file=sram_2kx8
+module=sram_2kx8
+target_device=gw1nr9c-004
+type=ram_sp
+version=3.0
+
+[Config]
+BYTE_SIZE=0
+DEPTH=2048
+LANG=0
+READ=0
+RESET_MODE=true
+WIDTH=8
+WRITE=0

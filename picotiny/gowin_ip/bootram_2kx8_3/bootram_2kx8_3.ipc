@@ -1,0 +1,17 @@
+[General]
+ipc_version=4
+file=bootram_2kx8_3
+module=bootram_2kx8_3
+target_device=gw1n9-004
+type=ram_sp
+version=3.0
+
+[Config]
+BYTE_SIZE=0
+DEPTH=2048
+LANG=0
+MEM_FILE=D:/verilog_wb/gowin/TangNano-9K-example/picotiny/fw/fw-brom/build/fw-brom_3.mi
+READ=0
+RESET_MODE=true
+WIDTH=8
+WRITE=0
