@@ -140,7 +140,7 @@ int main()
 
     if (waitcnt == FW_WAIT_MAXCNT) {
         void (*flash_vec)(void) = (void (*)(void))(0x00000000);
-        goto *flash_vec;
+        flash_vec();
     }
 
     while (1) {
@@ -215,7 +215,7 @@ int main()
             
             // Jump to reset vector
             void (*rst_vec)(void) = (void (*)(void))(0x80000000);
-            goto *rst_vec;
+            rst_vec();
             break;
         default:
             break;
