@@ -2,14 +2,14 @@
 #include <stdbool.h>
 
 typedef struct {
-	volatile uint32_t DATA;
-	volatile uint32_t CLKDIV;
+    volatile uint32_t DATA;
+    volatile uint32_t CLKDIV;
 } PICOUART;
 
 typedef struct {
-	volatile uint32_t OUT;
-	volatile uint32_t IN;
-	volatile uint32_t OE;
+    volatile uint32_t OUT;
+    volatile uint32_t IN;
+    volatile uint32_t OE;
 } PICOGPIO;
 
 typedef struct {
@@ -69,7 +69,7 @@ inline uint8_t spi_trbyte(uint8_t txdata) {
         QSPI0->IO = spi_io;
         txdata = (txdata << 1) | ((QSPI0->IO & QSPI_IO_MISO) >> 1);
     }
-	return txdata;
+    return txdata;
 }
 
 void spi_flashio(uint8_t *pdata, int length, int wren) {
@@ -140,7 +140,7 @@ int main()
 
     if (waitcnt == FW_WAIT_MAXCNT) {
         void (*flash_vec)(void) = (void (*)(void))(0x00000000);
-        goto *flash_vec;
+        flash_vec();
     }
 
     while (1) {
@@ -215,10 +215,10 @@ int main()
             
             // Jump to reset vector
             void (*rst_vec)(void) = (void (*)(void))(0x80000000);
-            goto *rst_vec;
+            rst_vec();
             break;
-		default:
-			break;
+        default:
+            break;
         }
     }
 }

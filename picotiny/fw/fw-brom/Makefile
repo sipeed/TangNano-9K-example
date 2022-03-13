@@ -1,7 +1,7 @@
 PROJ_NAME=fw-brom
 DEBUG=no
 BENCH=no
-COMPACT=no
+COMPACT=yes
 MULDIV=no
 COMPRESSED=no
 
@@ -34,7 +34,7 @@ ifeq ($(DEBUG),yes)
 endif
 
 ifeq ($(DEBUG),no)
-	ifeq ($(COMPACT),yew)
+	ifeq ($(COMPACT),yes)
 		CFLAGS += -g -O2
 	else
 		CFLAGS += -g -O3
