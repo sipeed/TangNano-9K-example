@@ -1,0 +1,8 @@
+D:/workspace/gowin/lcd114_test/sim/tb_lcd141.v {1 {vlog -work work -vopt -stats=none D:/workspace/gowin/lcd114_test/sim/tb_lcd141.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module _tb_lcd114_test
+
+Top level modules:
+	_tb_lcd114_test
+
+} {} {}}
