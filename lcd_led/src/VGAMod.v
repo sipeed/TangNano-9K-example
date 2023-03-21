@@ -17,19 +17,6 @@ module VGAMod
     reg         [15:0]  PixelCount;
     reg         [15:0]  LineCount;
 
-	//pluse include in back pluse; t=pluse, sync act; t=bp, data act; t=bp+height, data end
-	/*localparam      V_BackPorch = 16'd12; 
-	localparam      V_Pluse 	= 16'd11; 
-	localparam      HightPixel  = 16'd272;
-	localparam      V_FrontPorch= 16'd8; 
-	
-	localparam      H_BackPorch = 16'd50; 
-	localparam      H_Pluse 	= 16'd10; 
-	localparam      WidthPixel  = 16'd480;
-	localparam      H_FrontPorch= 16'd8;   */
-
- 
-
 	localparam      V_BackPorch = 16'd0; //6
 	localparam      V_Pluse 	= 16'd5; 
 	localparam      HightPixel  = 16'd480;
@@ -92,27 +79,27 @@ module VGAMod
                         ( LineCount <= LineForVS-V_FrontPorch-1 ))  ? 1'b1 : 1'b0;
 						//这里不减一，会抖动
 
-/*    assign  LCD_R   =   (PixelCount<200)? 5'b00000 : 
-                        (PixelCount<240 ? 5'b00001 :    
-                        (PixelCount<280 ? 5'b00010 :    
-                        (PixelCount<320 ? 5'b00100 :    
-                        (PixelCount<360 ? 5'b01000 :    
-                        (PixelCount<400 ? 5'b10000 :  5'b00000 )))));
+    // assign  LCD_R   =   (PixelCount<200)? 5'b00000 : 
+    //                     (PixelCount<240 ? 5'b00001 :    
+    //                     (PixelCount<280 ? 5'b00010 :    
+    //                     (PixelCount<320 ? 5'b00100 :    
+    //                     (PixelCount<360 ? 5'b01000 :    
+    //                     (PixelCount<400 ? 5'b10000 :  5'b00000 )))));
 
-    assign  LCD_G   =   (PixelCount<400)? 6'b000000 : 
-                        (PixelCount<440 ? 6'b000001 :    
-                        (PixelCount<480 ? 6'b000010 :    
-                        (PixelCount<520 ? 6'b000100 :    
-                        (PixelCount<560 ? 6'b001000 :    
-                        (PixelCount<600 ? 6'b010000 :  
-                        (PixelCount<640 ? 6'b100000 : 6'b000000 ))))));
+    // assign  LCD_G   =   (PixelCount<400)? 6'b000000 : 
+    //                     (PixelCount<440 ? 6'b000001 :    
+    //                     (PixelCount<480 ? 6'b000010 :    
+    //                     (PixelCount<520 ? 6'b000100 :    
+    //                     (PixelCount<560 ? 6'b001000 :    
+    //                     (PixelCount<600 ? 6'b010000 :  
+    //                     (PixelCount<640 ? 6'b100000 : 6'b000000 ))))));
 
-    assign  LCD_B   =   (PixelCount<640)? 5'b00000 : 
-                        (PixelCount<680 ? 5'b00001 :    
-                        (PixelCount<720 ? 5'b00010 :    
-                        (PixelCount<760 ? 5'b00100 :    
-                        (PixelCount<800 ? 5'b01000 :    
-                        (PixelCount<840 ? 5'b10000 :  5'b00000 )))));*/
+    // assign  LCD_B   =   (PixelCount<640)? 5'b00000 : 
+    //                     (PixelCount<680 ? 5'b00001 :    
+    //                     (PixelCount<720 ? 5'b00010 :    
+    //                     (PixelCount<760 ? 5'b00100 :    
+    //                     (PixelCount<800 ? 5'b01000 :    
+    //                     (PixelCount<840 ? 5'b10000 :  5'b00000 )))));
 
 
     assign  LCD_R   =   (PixelCount<Width_bar*BarCount)? 5'b00000 :  

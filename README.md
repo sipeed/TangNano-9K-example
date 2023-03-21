@@ -9,15 +9,21 @@ When you meet error code `PR2017`. Do what is shown below.(Just enable correspon
 ## led
 
 Demo project for drive LED and on board led.
-The related LED tutorial can be found at <https://wiki.sipeed.com/hardware/en/tang/Tang-Nano-Doc/examples.html>
+LED guide is at <https://wiki.sipeed.com/hardware/en/tang/Tang-Nano-Doc/examples.html>
 
 <img src="./.assets/blink.gif" alt="led">
 
 ## lcd_led
 
-Demo project for drive RGB LCD and on board led.
+Demo project for drive RGB LCD and on board led, to drive the 5 inch RGB screen with 800*480 resolution.
 
 ![lcd](./.assets/lcd_led.jpg)
+
+## lcd_4.3
+
+Demo project for drive RGB LCD and on board led, to drive the 4.3 inch RGB screen with 480*272 resolution.
+
+![3_colorbar](./.assets/lcd_4.3_colorbar.jpg)
 
 ## picotiny
 
