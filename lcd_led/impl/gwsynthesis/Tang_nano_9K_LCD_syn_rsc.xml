@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module name="TOP" Register="28" Lut="139">
-    <SubModule name="chip_pll"/>
-    <SubModule name="D1" Register="27" Alu="186" Lut="69" Dsp="5"/>
-</Module>
