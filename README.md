@@ -10,6 +10,7 @@
     - [picotiny](#picotiny)
     - [hdmi](#hdmi)
     - [spi\_lcd](#spi_lcd)
+    - [uart](#uart)
 
 ## Question
 
@@ -62,3 +63,9 @@ This is an example to drive the 1.14 inch lcd screen which can connect with this
 Be sure match board with screen in the same order
 
 ![spi_lcd](./.assets/spi_lcd.jpg)
+
+### uart
+
+FPGA uart example, containing 2 uart example messages. Burn into FPGA and open onboard serial port to check the message with 115200 baudrate.
+
+FPGA can not be burned when the serial port is opened.
