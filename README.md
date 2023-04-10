@@ -11,6 +11,9 @@
     - [hdmi](#hdmi)
     - [spi\_lcd](#spi_lcd)
     - [uart](#uart)
+    - [Internet\_learning\_resources](#internet_learning_resources)
+      - [TangNano9k\_tutorial](#tangnano9k_tutorial)
+      - [tangnano9k-series-examples](#tangnano9k-series-examples)
 
 ## Question
 
@@ -69,3 +72,19 @@ Be sure match board with screen in the same order
 FPGA uart example, containing 2 uart example messages. Burn into FPGA and open onboard serial port to check the message with 115200 baudrate.
 
 FPGA can not be burned when the serial port is opened.
+
+### Internet_learning_resources
+
+Use command `git submodule --init update` to get the source code.
+
+#### TangNano9k_tutorial
+
+Source link: https://gitee.com/lanzhoo/TangNano9k_Tutorial.git
+
+Step tutorials to build a softcore running via arduino.
+
+#### tangnano9k-series-examples
+
+Source link: https://github.com/lushaylabs/tangnano9k-series-examples
+
+Example codes on Tang Nano 9K, read https://learn.lushaylabs.com/tang-nano-series/ to see the usages.

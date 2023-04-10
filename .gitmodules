@@ -1,0 +1,6 @@
+[submodule "Internet_learning_resources/TangNano9k_Tutorial"]
+	path = Internet_learning_resources/TangNano9k_Tutorial
+	url = https://gitee.com/lanzhoo/TangNano9k_Tutorial.git
+[submodule "Internet_learning_resources/tangnano9k-series-examples"]
+	path = Internet_learning_resources/tangnano9k-series-examples
+	url = https://github.com/lushaylabs/tangnano9k-series-examples
