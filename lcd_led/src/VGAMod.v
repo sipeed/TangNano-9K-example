@@ -27,11 +27,9 @@ module VGAMod
 	localparam      WidthPixel  = 16'd800; 
 	localparam      H_FrontPorch= 16'd210;
 
-
-    localparam      Width_bar   =   45;
-    reg         [15:0]  BarCount;
-    
- 
+    parameter       BarCount    = 16; // RGB565
+    localparam      Width_bar   = WidthPixel / 16;
+     
     localparam      PixelForHS  =   WidthPixel + H_BackPorch + H_FrontPorch;  	
     localparam      LineForVS   =   HightPixel + V_BackPorch + V_FrontPorch;
 
@@ -101,27 +99,24 @@ module VGAMod
     //                     (PixelCount<800 ? 5'b01000 :    
     //                     (PixelCount<840 ? 5'b10000 :  5'b00000 )))));
 
+    assign  LCD_R   =   PixelCount < H_BackPorch + Width_bar *  0    ? 5'b00000 :  
+                        PixelCount < H_BackPorch + Width_bar *  1    ? 5'b00001 :    
+                        PixelCount < H_BackPorch + Width_bar *  2    ? 5'b00010 :    
+                        PixelCount < H_BackPorch + Width_bar *  3    ? 5'b00100 :    
+                        PixelCount < H_BackPorch + Width_bar *  4    ? 5'b01000 :    
+                        PixelCount < H_BackPorch + Width_bar *  5    ? 5'b10000 :  5'b00000 ;   
 
-    assign  LCD_R   =   (PixelCount<Width_bar*BarCount)? 5'b00000 :  
-                        (PixelCount<(Width_bar*(BarCount+1)) ? 5'b00001 :    
-                        (PixelCount<(Width_bar*(BarCount+2)) ? 5'b00010 :    
-                        (PixelCount<(Width_bar*(BarCount+3)) ? 5'b00100 :    
-                        (PixelCount<(Width_bar*(BarCount+4)) ? 5'b01000 :    
-                        (PixelCount<(Width_bar*(BarCount+5)) ? 5'b10000 :  5'b00000 )))));
+    assign  LCD_G   =   PixelCount < H_BackPorch + Width_bar *  6    ? 6'b000001 :    
+                        PixelCount < H_BackPorch + Width_bar *  7    ? 6'b000010 :    
+                        PixelCount < H_BackPorch + Width_bar *  8    ? 6'b000100 :    
+                        PixelCount < H_BackPorch + Width_bar *  9    ? 6'b001000 :    
+                        PixelCount < H_BackPorch + Width_bar *  10   ? 6'b010000 :  
+                        PixelCount < H_BackPorch + Width_bar *  11   ? 6'b100000 : 6'b000000 ;
 
-    assign  LCD_G   =   (PixelCount<(Width_bar*(BarCount+5)))? 6'b000000 : 
-                        (PixelCount<(Width_bar*(BarCount+6)) ? 6'b000001 :    
-                        (PixelCount<(Width_bar*(BarCount+7)) ? 6'b000010 :    
-                        (PixelCount<(Width_bar*(BarCount+8)) ? 6'b000100 :    
-                        (PixelCount<(Width_bar*(BarCount+9)) ? 6'b001000 :    
-                        (PixelCount<(Width_bar*(BarCount+10)) ? 6'b010000 :  
-                        (PixelCount<(Width_bar*(BarCount+11)) ? 6'b100000 : 6'b000000 ))))));
-
-    assign  LCD_B   =   (PixelCount<(Width_bar*(BarCount+11)))? 5'b00000 : 
-                        (PixelCount<(Width_bar*(BarCount+12)) ? 5'b00001 :    
-                        (PixelCount<(Width_bar*(BarCount+13)) ? 5'b00010 :    
-                        (PixelCount<(Width_bar*(BarCount+14)) ? 5'b00100 :    
-                        (PixelCount<(Width_bar*(BarCount+15)) ? 5'b01000 :    
-                        (PixelCount<(Width_bar*(BarCount+16)) ? 5'b10000 :  5'b00000 )))));
+    assign  LCD_B   =   PixelCount < H_BackPorch + Width_bar *  12   ? 5'b00001 :    
+                        PixelCount < H_BackPorch + Width_bar *  13   ? 5'b00010 :    
+                        PixelCount < H_BackPorch + Width_bar *  14   ? 5'b00100 :    
+                        PixelCount < H_BackPorch + Width_bar *  15   ? 5'b01000 :    
+                        PixelCount < H_BackPorch + Width_bar *  16   ? 5'b10000 :  5'b00000 ;
 
 endmodule
