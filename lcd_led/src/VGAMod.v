@@ -59,12 +59,8 @@ module VGAMod
 			Data_R <= 9'b0;
 			Data_G <= 9'b0;
 			Data_B <= 9'b0;
-            BarCount <=9'd5;
             end
-        else begin
-			end
 	end
-
 	//注意这里HSYNC和VSYNC负极性
     assign  LCD_HSYNC = (( PixelCount >= H_Pluse)&&( PixelCount <= (PixelForHS-H_FrontPorch))) ? 1'b0 : 1'b1;
     //assign  LCD_VSYNC = ((( LineCount  >= 0 )&&( LineCount  <= (V_Pluse-1) )) ) ? 1'b1 : 1'b0;		//这里不减一的话，图片底部会往下拖尾？
