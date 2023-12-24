@@ -83,6 +83,7 @@ if __name__ == '__main__':
     lbegin = False
     for line in file:
         # skipping ram space
+        line = line.strip();
         if lbegin:
             lprog.append(line)
             plinecount += 1
@@ -93,7 +94,7 @@ if __name__ == '__main__':
     file.close()
 
 
-    nproglen = 16 * (plinecount-1) + len(lprog[plinecount-1].split(' ')) - 1
+    nproglen = 16 * (plinecount-1) + len(lprog[plinecount-1].split(' '))
 
     print("Read program with", nproglen, "bytes")
 
@@ -104,9 +105,10 @@ if __name__ == '__main__':
     for i, lstr in enumerate(lprog):
         if lstr.startswith('@'):
             wp = int(lstr[1:], 16) - flash_base
-        for j, bprog in enumerate(lstr.split(' ')[0:-1]):
-            prog[wp] = int(bprog, 16)
-            wp += 1
+        else:
+            for j, bprog in enumerate(lstr.split(' ')):
+                prog[wp] = int(bprog, 16)
+                wp += 1
 
 
     # open serial and check status
