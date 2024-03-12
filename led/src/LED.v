@@ -17,7 +17,7 @@ end
 
 always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n)
-        led <= 6'b101110;
+        led <= 6'b111110;
     else if (counter == 24'd1349_9999)       // 0.5s delay
         led[5:0] <= {led[4:0],led[5]};
     else
