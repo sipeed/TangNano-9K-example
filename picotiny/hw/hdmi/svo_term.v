@@ -98,7 +98,7 @@ module svo_term #(
 
 	always @(posedge clk) begin
 		if (mem_portA_wen) begin
-			mem_portA_rdata <= 'bx;
+//			mem_portA_rdata <= 'bx;
 			mem[mem_portA_addr] <= mem_portA_wdata;
 		end else begin
 			mem_portA_rdata <= mem[mem_portA_addr];
